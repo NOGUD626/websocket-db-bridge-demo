@@ -1,0 +1,16 @@
+{
+  "name": "websocket-db-bridge-demo",
+  "private": true,
+  "version": "1.0.0",
+  "type": "module",
+  "scripts": {
+    "db:up": "docker compose -f docker/docker-compose.yml up -d",
+    "db:down": "docker compose -f docker/docker-compose.yml down -v",
+    "proxy": "node src/proxy.mjs",
+    "client": "node src/client.mjs"
+  },
+  "dependencies": {
+    "mysql2": "^3.11.0",
+    "ws": "^8.18.0"
+  }
+}
